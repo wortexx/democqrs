@@ -6,11 +6,8 @@ namespace Domain.Model.Insuarance.Model
 {
     public class InsuarancePolicy : Ncqrs.Domain.AggregateRootMappedByConvention
     {
-        private readonly Guid _id;
-        
-        public InsuarancePolicy(Guid id, string policyNumber)
+        public InsuarancePolicy(Guid id, string policyNumber) : base(id)
         {
-            _id = id;
             ApplyEvent(new InsuarancePolicyCreated(id, policyNumber));
         }
 
@@ -18,10 +15,9 @@ namespace Domain.Model.Insuarance.Model
         {
             Deleted = true;
             
-            ApplyEvent(new InsuarancePolicyDeleted(_id));
+            ApplyEvent(new InsuarancePolicyDeleted(this.Id));
         }
 
-        public Guid Id { get { return _id; } }
         public bool Deleted { get; protected set; }
         public ICollection<Location> Locations { get; protected set; }
     }

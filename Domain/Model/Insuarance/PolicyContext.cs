@@ -1,7 +1,8 @@
 ﻿using System.Data.Entity;
-using Domain.Design;
+using Domain.Model.Insuarance.Model;
+using Ncqrs.Domain;
 
-namespace Domain.Model
+namespace Domain.Model.Insuarance
 {
     public class PolicyContext : DbContext
     {
@@ -10,7 +11,9 @@ namespace Domain.Model
         
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Entity>().HasKey(x => x.Id);
+            modelBuilder.Entity<AggregateRootMappedByConvention>().HasKey(x => x.EventSourceId);
+            modelBuilder.Entity<EntityMappedByConvention>()
+                                .HasKey(x => x.EntityId);
         }
     }
 }

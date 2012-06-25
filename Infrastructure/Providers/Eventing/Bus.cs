@@ -1,11 +1,25 @@
-﻿using Domain;
+﻿using System;
+using System.Collections.Generic;
+using Domain;
 using Domain.Design;
 using Rhino.ServiceBus;
+using SimpleCQRS;
 
 namespace Infrastructure.Providers.Eventing
 {
     public class Bus : ICommandSender, IEventPublisher
     {
+        public void RegisterHandler<T>(Action<T> handler) where T : Message
+        {
+            List<Action<Message>> handlers;
+            if (!_routes.TryGetValue(typeof(T), out handlers))
+            {
+                handlers = new List<Action<Message>>();
+                _routes.Add(typeof(T), handlers);
+            }
+            handlers.Add(DelegateAdjuster.CastArgument<Message, T>(x => handler(x)));
+        }
+
         private readonly IServiceBus _bus;
 
         public Bus(IServiceBus bus)

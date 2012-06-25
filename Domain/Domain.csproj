@@ -36,6 +36,15 @@
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.4.3.1\lib\net40\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Ncqrs">
+      <HintPath>..\packages\ncqrs.0.8.0.0\lib\Ncqrs.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.3.5.8\lib\35\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -50,11 +59,8 @@
     <Compile Include="Commands\Insuarance\CreatePolicy.cs" />
     <Compile Include="Commands\Insuarance\DeletePolicy.cs" />
     <Compile Include="Design\AggregateNotFoundException.cs" />
-    <Compile Include="Model\Insuarance\Handlers\CommandHandlers.cs" />
-    <Compile Include="Design\Entity.cs" />
     <Compile Include="Design\RootAggregate.cs" />
     <Compile Include="Design\Command.cs" />
-    <Compile Include="Design\Commands.cs" />
     <Compile Include="Design\ConcurrencyException.cs" />
     <Compile Include="Design\Events.cs" />
     <Compile Include="Design\EventStore.cs" />
@@ -64,13 +70,13 @@
     <Compile Include="Design\Repository.cs" />
     <Compile Include="FakeBus.cs" />
     <Compile Include="Design\Handles.cs" />
-    <Compile Include="ICommandSender.cs" />
+    <Compile Include="Design\ICommandSender.cs" />
     <Compile Include="IEventPublisher.cs" />
     <Compile Include="InfrastructureCrap.DontBotherReadingItsNotImportant.cs" />
     <Compile Include="Model\Insuarance\Model\InsuarancePolicy.cs" />
     <Compile Include="Model\Insuarance\Model\Location.cs" />
     <Compile Include="Model\Insuarance\PolicyContext.cs" />
-    <Compile Include="Model\Insuarance\Services\IInsuarancePolicyRepository.cs" />
+    <Compile Include="Model\Primitives\Address.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\IDocumentProvider.cs" />
   </ItemGroup>
