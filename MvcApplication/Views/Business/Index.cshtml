@@ -1,0 +1,23 @@
+﻿@using Domain.Commands
+@model List<Primitives.Views.BusinessDocument>
+
+@{
+    ViewBag.Title = "Companies";
+    Layout = "_Layout";
+}
+
+<h2>Companies</h2>
+
+<table>
+    <tbody>
+        @foreach(var company in Model)
+        {
+            <tr>
+                <td>@company.Name </td>
+                <td>
+                    @Html.ActionLink("Delete", "Delete", new DeleteBusiness{BusinessId = company.BusinessId})
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

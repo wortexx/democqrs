@@ -62,7 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandHandlers.cs" />
-    <Compile Include="Domain.cs" />
     <Compile Include="EventStore.cs" />
     <Compile Include="FakeBus.cs" />
     <Compile Include="InfrastructureCrap.DontBotherReadingItsNotImportant.cs" />
@@ -70,7 +69,6 @@
     <Compile Include="Commands.cs" />
     <Compile Include="Events.cs" />
     <Compile Include="Message.cs" />
-    <Compile Include="ReadModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

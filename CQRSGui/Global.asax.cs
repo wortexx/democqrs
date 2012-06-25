@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
+using Domain.Model;
 using SimpleCQRS;
 using SimpleCQRS.Domain.Design;
 using SimpleCQRS.ReadModel;

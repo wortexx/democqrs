@@ -14,6 +14,7 @@
     <AssemblyName>CQRSGui</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -109,6 +110,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{A2F669CD-8F85-4431-8449-9CD02C497EBF}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SimpleCQRS\SimpleCQRS.csproj">
       <Project>{DAFD2A8A-D6B0-4433-8DDF-B98460C64EC6}</Project>
       <Name>SimpleCQRS</Name>
