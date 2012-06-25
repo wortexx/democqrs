@@ -8,9 +8,15 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Domain")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
+<<<<<<< HEAD
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Domain")]
 [assembly: AssemblyCopyright("Copyright ©  2012")]
+=======
+[assembly: AssemblyCompany("EPAM Systems")]
+[assembly: AssemblyProduct("Domain")]
+[assembly: AssemblyCopyright("Copyright © EPAM Systems 2012")]
+>>>>>>> 5e101b063b277f508ed02599c16433ebf62baaf6
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +26,11 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
+<<<<<<< HEAD
 [assembly: Guid("b0ae1a67-2f31-4857-9de1-787dde4921b1")]
+=======
+[assembly: Guid("a8324dfc-0fe4-4b4b-a697-c91055529b11")]
+>>>>>>> 5e101b063b277f508ed02599c16433ebf62baaf6
 
 // Version information for an assembly consists of the following four values:
 //

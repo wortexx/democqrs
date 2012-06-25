@@ -1,0 +1,9 @@
+﻿@model Commands.CreateBusiness
+
+@Html.HiddenFor(x => x.BusinessId)
+<div class="control-group">
+    @Html.DisplayFor(x => x.Name)
+    <div>
+        @Html.TextBoxFor(x => x.Name, new { @class = "input-xlarge" })
+    </div>
+</div>
