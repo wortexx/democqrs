@@ -133,7 +133,7 @@ Desktop.ini
 
 *.py[co]
 
-# Packages
+Packages
 *.egg
 *.egg-info
 dist
